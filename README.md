@@ -38,7 +38,7 @@ Select the option you want
 -  Resize option will cconvert the PDF to image first, which is slower
 
 ## Issues
--  IDK how add loading when converting from PDF to images
+- IDK how add loading when converting from PDF to images
   - Tried editing the convert_from_path method and Popen but no idea how
 -  Large PDF files sometimes takes really long randomly
 
