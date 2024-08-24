@@ -6,10 +6,12 @@ Created this a few years back when i couldnt find a free and reliable way to con
 -  Convert JPGs and/or PDFs to a single PDF file (With option to resize all the pages to be the same)
 
 
-## Download
--  Python file if you want to see the badly written code
+## Download Options
+-  Python file if you want to see the badly written code from when i just started
 -  Executable file in executable …
 
+## Executable
+Run the executable, leave the _internal folder alone
 ## Python File
 The following packages must be installed first
 
@@ -22,8 +24,6 @@ Download [Poppler](https://poppler.freedesktop.org/) and unzip it in your C:\Pro
 or\
 Replace the poppler_path on line 22
 
-## Executable
-Run the executable, leave the _internal folder alone
 
 ## How to Use
 Select the option you want
