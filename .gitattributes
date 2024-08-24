@@ -1,1 +1,2 @@
-Executable/PDF-and-Image-Converter/* linguist-generated=false
+* linguist-vendored
+*.tcl linguist-vendored=false
