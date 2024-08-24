@@ -19,7 +19,10 @@ from pdf2image import convert_from_path
 from PIL import Image
 from PyPDF2 import PdfMerger
 
+#Before converting using pyinstaller change this
 poppler_path = r'C:\Program Files (x86)\poppler\Library\bin'
+#poppler_path = r'_internal\poppler\bin'
+
 allowed_ext = ['jpg', 'jpeg','png','bmp'] #Have not tried otheer extension
 Image.MAX_IMAGE_PIXELS = None   #Remove warning message from working with large image
 
