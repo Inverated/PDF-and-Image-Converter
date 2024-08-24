@@ -1,6 +1,6 @@
 # PDF-and-Image-Converter
 
-Created this a few years back when i couldnt find a free and reliable way to convert files between PDFs and images.
+Created this a few years back when i couldnt find a free and reliable way to convert files between PDFs and images.\
 2 Functions avaliable:
 -  Convert PDF to JPG
 -  Convert JPGs and/or PDFs to a single PDF file (With option to resize all the pages to be the same)
