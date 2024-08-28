@@ -18,7 +18,7 @@ Download the folder and run the executable, leave the _internal folder alone
 ## Python
 The following packages must be installed first
 
-```bash
+```cmd
 pip install PyPDF2
 pip install Pillow
 pip install pdf2image
@@ -48,4 +48,4 @@ Select the option you want
 ## Note
 -  No UI, everything is in cmd. Will try to learn for other projects but not this for now.
 -  Maybe add option to choose output format for image when i get to it
--  For windows
+-  For Windows only
