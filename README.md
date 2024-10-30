@@ -14,6 +14,7 @@ Created this a few years back when i couldnt find a free and reliable way to con
 
 ## Executable
 Download the folder and run the executable, leave the _internal folder alone
+- Trying to run it after a few months, the exe does not work. idk help
 ## OR
 ## Python
 The following packages must be installed first
