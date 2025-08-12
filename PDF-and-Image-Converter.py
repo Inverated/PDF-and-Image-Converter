@@ -19,11 +19,10 @@ from pdf2image import convert_from_path
 from PIL import Image
 from PyPDF2 import PdfMerger
 
-#Before converting using pyinstaller change this
 poppler_path = r'C:\Program Files (x86)\poppler\Library\bin'
-#poppler_path = r'_internal\poppler\bin'
-
 allowed_ext = ['jpg', 'jpeg','png','bmp'] #Have not tried otheer extension
+defaultExt = 'BMP'
+
 Image.MAX_IMAGE_PIXELS = None   #Remove warning message from working with large image
 
 def get_files(size, filetypes = [('All files','*.*')]):
@@ -189,13 +188,13 @@ def convert_and_resize_into_pdf(dir_list, name_list, ext_list, temp_path, name):
             new_dir_list.append(temp_path+'/{}.'.format(temp_no) + curr_ext)
             temp_no += 1
         else:
-            curr_ext = "bmp"
+            curr_ext = defaultExt
             print('\nReading and converting {} to images'.format(name_list[i]))
             print('Warning, large number/high resolution pages will take longer, up to ~2s/page')
             images = convert_from_path(dir_list[i], poppler_path=poppler_path)
             print('{} images found in {}\n'.format(len(images), name_list[i]))
             for j in range(len(images)):
-                images[j].save(temp_path+ '/{}.'.format(temp_no) + curr_ext, 'bmp')
+                images[j].save(temp_path+ '/{}.'.format(temp_no) + curr_ext, curr_ext)
                 new_dir_list.append(temp_path+'/{}.'.format(temp_no) + curr_ext)
                 temp_no += 1
 
@@ -236,6 +235,17 @@ def pdf_to_jpg():
         print('Exiting program')
         return
 
+    while True:
+        print('\nSelect extension type:')
+        for i in range(len(allowed_ext)):
+            print(str(i+1) + ': ' + allowed_ext[i])
+        chosen = input("Select an extension: ")
+        if not str(chosen).isdigit() or int(chosen) < 1 or int(chosen) > len(allowed_ext):
+            print("Not an option")
+        else:
+            defaultExt = allowed_ext[int(chosen) - 1]
+            break
+        
     file_dir = dir_list[0]
     file_name = ( file_dir.split('/')[-1] ).split('.')[0]
 
@@ -254,7 +264,7 @@ def pdf_to_jpg():
     print('{} pages can be found in {}.pdf'.format(len(images), file_name))
     
     for i in range(len(images)):
-        images[i].save(path+ '/{} page '.format(file_name)+ str(i+1) +'.bmp', 'BMP')
+        images[i].save(path+ '/{} page '.format(file_name)+ str(i+1) +'.' + defaultExt, defaultExt)
     print('Images saved in folder named: {}'.format(file_name))
     return
     #Saves complied folder of images into the same dir 
