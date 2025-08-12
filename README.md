@@ -12,7 +12,7 @@ Created this a few years back when i couldnt find a free and reliable way to con
 -  Python file if you want to see the badly written code from when i just started
 
 
-## Executable
+## Executable (Don't use, not updated)
 Download the folder and run the executable, leave the _internal folder alone
 - Trying to run it after a few months, the exe does not work. idk help
 ## OR
